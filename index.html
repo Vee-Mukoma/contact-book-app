@@ -12,6 +12,8 @@
 
     <script src="config.js"></script>
     <script>
+        document.getELementById("refresh").addEventListener('click', fetchContacts);//when refresh button is pressed
+
         function fetchContacts(){
             fetch(rootPath + "controller/get-contacts/")
             .then(function(response){
@@ -40,7 +42,8 @@
             document.getElementById("table").innerHTML = output;
             
         }
-
     </script>
+
+
 </body>
 </html>
