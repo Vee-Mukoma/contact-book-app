@@ -34,6 +34,7 @@
     <script src="config.js"></script>
     <script>
         var id = getId();
+        document.getElementById("homeLink").addEventListener('click', homeLink());
         console.log("The Id is: " + id);
 
         function getId(){
@@ -53,6 +54,10 @@
                     console.log(data);
                 })
 
+        }
+
+        function homeLink(){
+            window.open("index.html", "_self");
         }
     </script>
 </body>
