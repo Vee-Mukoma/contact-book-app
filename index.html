@@ -8,7 +8,7 @@
 <body onload="fetchContacts()">
     <div id="table">Contacts Loading.....</div>
     <button id="refresh" type="button">Refresh</button>
-    <button id="add" type="button">Add Contact</button>
+    <button id="addContact" type="button">Add Contact</button>
 
     <script src="config.js"></script>
     <script>
@@ -23,17 +23,24 @@
         }
 
         function displayOutput(data){
-            output = "<table>";
+
+            let output = "<table>";
             
-            for(a in data){
+            for(let a in data){
                 output += `
                     <tr>
                         <td><img src="${rootPath}controller/uploads/${data[a].avatar}"/></td>
+                        <td><h5>${data[a].firstname}</h5></td>
+                        <td><h5>${data[a].lastname}</h5></td>
                     </tr>
                         
                 `
             }
+            output += "</table>";
+            document.getElementById("table").innerHTML = output;
+            
         }
+
     </script>
 </body>
 </html>
