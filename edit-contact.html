@@ -37,6 +37,7 @@
         document.getElementById("homeLink").addEventListener('click', homeLink);
         document.getElementById("editContact").addEventListener('click', editContact)
         document.getElementById("submitForm").addEventListener('click', submitForm);
+        document.getElementById("deleteContact").addEventListener('click', deleteContact);
 
         function getId(){
             var url = window.location.href; //returns the full url of the current open window
@@ -106,6 +107,27 @@
                 }
             })
         }
+
+        function deleteContact(){
+            var confirmDelete = confirm("Delete Contact. Are you sure?"); //going to display a confirm box
+
+            if(confirmDelete){
+                fetch(rootPath + 'controller/delete-contact/?id=' + id)
+                .then(function(response){
+                    return response.text();
+                })
+                .then (function(data){
+                    if(data == "1"){
+                        homeLink()
+                    }else{
+                        alert(data);
+
+                    }
+                })
+            }
+        }
+
+
     </script>
 </body>
 </html>
