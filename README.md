@@ -1,10 +1,10 @@
 # contact-book-app
 
-📇 Contact Book Web App
+## 📇 Contact Book Web App
 
 This is a simple Contact Book web application that allows users to add, edit, delete, and view contacts. Each contact contains a name, email, phone number, and profile image (avatar). This app connects to a remote backend API and requires an API key to function.
 
-🚀 Features
+## 🚀 Features
 
 🔐 API Key-based authentication
 📋 View list of contacts
@@ -22,7 +22,7 @@ This is a simple Contact Book web application that allows users to add, edit, de
 ├── enter-api-key.html      # Prompt user to enter their API key
 ├── config.js               # Configuration file with rootPath and API key logic
 
-🧪 How It Works
+## 🧪 How It Works
 
 On first visit, config.js checks if an API key exists in localStorage. If not, the user is redirected to enter-api-key.html.
 
@@ -38,7 +38,7 @@ Delete the contact
 
 The Add Contact button opens add-contact.html, where the user can add a new contact with all fields and an avatar.
 
-🛠️ Setup & Usage
+## 🛠️ Setup & Usage
 
 Clone or download the project folder.
 
@@ -47,3 +47,7 @@ Open index.html in your browser.
 If prompted, enter your API key. This will be saved to localStorage.
 
 Begin using the app to manage your contacts.
+
+## 🎓 Project Context
+
+This project was built as part of my learning journey at the **FNB App Academy**.
