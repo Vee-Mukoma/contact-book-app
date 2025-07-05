@@ -35,6 +35,7 @@
     <script>
         var id = getId();
         document.getElementById("homeLink").addEventListener('click', homeLink);
+        document.getElementById("editContact").addEventListener('click', editContact)
         console.log("The Id is: " + id);
 
         function getId(){
@@ -69,6 +70,16 @@
             document.getElementById("lastName").value = data[0].lastname;
             document.getElementById("mobile").value = data[0].mobile;
             document.getElementById("email").value = data[0].email;
+        }
+
+        function editContact(){
+            document.getElementById("firstName").readOnly = false;
+            document.getElementById("lastName").readOnly = false;
+            document.getElementById("mobile").readOnly = false;
+            document.getElementById("email").readOnly = false;
+            document.getElementById("avatar").hidden = false;
+            document.getElementById("submitForm").hidden = false;
+
         }
     </script>
 </body>
