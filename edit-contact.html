@@ -34,7 +34,7 @@
     <script src="config.js"></script>
     <script>
         var id = getId();
-        document.getElementById("homeLink").addEventListener('click', homeLink());
+        document.getElementById("homeLink").addEventListener('click', homeLink);
         console.log("The Id is: " + id);
 
         function getId(){
@@ -50,7 +50,7 @@
                     return response.json();
                 })
                 .then(function(data){
-                    //display contact info
+                    displayOutput(data);
                     console.log(data);
                 })
 
@@ -58,6 +58,15 @@
 
         function homeLink(){
             window.open("index.html", "_self");
+        }
+
+        function displayOutput(data){
+            avatarImg = `
+                <img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200">
+            `
+            document.getElementById("avatarImage").innerHTML = "avatarImg";
+            document.getElementById("firstName").value = data[0].firstname;
+            document.getElementById("lastName").value = data[0].lastname;
         }
     </script>
 </body>

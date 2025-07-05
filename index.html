@@ -13,7 +13,7 @@
     <script src="config.js"></script>
     <script>
         document.getElementById("addContact").addEventListener('click', addContact);
-        document.getELementById("refresh").addEventListener('click', fetchContacts);//when refresh button is pressed
+        document.getElementById("refresh").addEventListener('click', fetchContacts);//when refresh button is pressed
 
         function fetchContacts(){
             fetch(rootPath + "controller/get-contacts/")
